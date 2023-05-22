@@ -20,12 +20,13 @@ type Student struct {
 
 func UpdateAverage(students map[int]*Student) {
 	var sum float64
-	for _, estudante  := range students{
-		for _, nota := range estudante.Grades{
+	for _, estudante := range students {
+		for _, nota := range estudante.Grades {
 			sum += nota
-			tamanho := len(estudante.Grades)
-			estudante.Average = sum/float64(tamanho)
 		}
+		tamanho := len(estudante.Grades)
+		estudante.Average = sum / float64(tamanho)
 	}
 }
+
 
